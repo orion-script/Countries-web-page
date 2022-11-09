@@ -21,10 +21,10 @@ function CountryDetails() {
         <div className="w-11/12 m-auto md:m-0 md:w-2/5 rounded-xl">
           <img src={flags.svg} alt="" className="rounded-xl" />
         </div>
-        <div className="w-11/12 md:w-3/5 md:flex md:flex-col items-center">
+        <div className="w-4/5 ml-4 md:ml-0 md:w-3/5 md:flex md:flex-col items-center">
           <div className="md:flex md:flex-cols w-full justify-between h-80 items-center">
             <div className="w-full ml-2 md:w-2/5 md:ml-5 pb-5 md:pb-0">
-              <h2 className="font-bold text-md md:text-2xl py-5">
+              <h2 className="font-bold text-xl md:text-2xl py-5">
                 {name.common}
               </h2>
               <p>

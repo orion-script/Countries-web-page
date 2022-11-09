@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 function CountryCards({ country }) {
   return (
     <Link
-      className="bg-white m-auto h-96 rounded-xl shadow-xl dark:bg-gray-700 dark:text-white "
+      className="bg-white w-4/5 md:w-auto m-auto h-96 rounded-xl shadow-xl dark:bg-gray-700 dark:text-white"
       to="/details"
       state={country}
     >
       <img
         src={country.flags.svg}
         alt={country.flags}
-        className="h-60 rounded-t-xl"
+        className="rounded-t-xl"
       />
       <div className="pl-5">
-        <h1 className="font-bold text-sm lg:text-xl py-3">
+        <h1 className="font-bold text-lg md:text-xl py-3">
           {country.name.common}
         </h1>
         <p>
