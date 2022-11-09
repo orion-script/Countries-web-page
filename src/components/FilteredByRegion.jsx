@@ -29,10 +29,10 @@ const options = [
 
 function FilteredByRegoin({ selectField, onSelectHandler, index }) {
   return (
-    <div className=" ml-4 mt-5 w-2/5 md:w-44 h-auto shadow-lg rounded-xl mr-8 md:mr-0 bg-gray-100 dark:bg-gray-700 dark:text-white">
+    <div className="ml-4 mt-5 w-2/5 md:w-44 h-auto shadow-lg rounded-xl mr-8 md:mr-0 bg-gray-100 dark:bg-gray-700 dark:text-white">
       <select
         name="region"
-        className="pl-4 w-full h-auto py-5 rounded-xl bg-white dark:bg-gray-700 dark:text-white"
+        className="p-4 w-full h-auto py-5 rounded-xl bg-white dark:bg-gray-700 dark:text-white"
         value={selectField}
         onChange={onSelectHandler}
       >
@@ -40,7 +40,7 @@ function FilteredByRegoin({ selectField, onSelectHandler, index }) {
           <option
             value={option.value}
             key={index}
-            className="w-full rounded-b-xl"
+            className="w-full rounded-b-xl mr-10"
           >
             {option.label}
           </option>

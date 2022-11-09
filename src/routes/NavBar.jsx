@@ -26,9 +26,7 @@ function NavBar() {
         </div>
         <div
           className="flex flex-row items-center cursor-pointer"
-          onClick={() => {
-            toggleMode();
-          }}
+          onClick={toggleMode}
         >
           <FaMoon className="cursor-pointer" />
           <p className="px-2 font-bold text-xs md:text-base">Dark Mode</p>
