@@ -18,7 +18,8 @@ function CountryCards({ country }) {
           {country.name.common}
         </h1>
         <p>
-          <span className="font-bold">Population:</span> {country.population}
+          <span className="font-bold">Population:</span>{" "}
+          {new Intl.NumberFormat().format(country.population)}
         </p>
         <p>
           <span className="font-bold">Region:</span> {country.region}
