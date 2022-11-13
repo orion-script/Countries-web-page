@@ -6,7 +6,20 @@ import { useLocation } from "react-router";
 function CountryDetails() {
   let { state } = useLocation();
 
-  const { flags, name, population, region, subregion, capital, tld } = state;
+  const {
+    flags,
+    name,
+    population,
+    region,
+    subregion,
+    capital,
+    tld,
+    continents,
+    borders,
+  } = state;
+
+  const Languages = Object.values(state.languages);
+  const Currencies = Object.values(state.currencies);
 
   return (
     <div className="bg-slate-100 dark:bg-gray-800 dark:text-white w-full h-auto pt-10">
@@ -28,46 +41,43 @@ function CountryDetails() {
                 {name.common}
               </h2>
               <p>
-                <span className="font-bold">Native Name:</span> {}
+                <span className="font-bold">Native Name:</span>{" "}
+                {state.translations.nld.common}
               </p>
               <p>
-                {" "}
                 <span className="font-bold">Population:</span>{" "}
                 {new Intl.NumberFormat().format(population)}
               </p>
               <p>
-                {" "}
                 <span className="font-bold">Region:</span> {region}
               </p>
               <p>
-                {" "}
                 <span className="font-bold">Sub-Region:</span> {subregion}
               </p>
               <p>
-                {" "}
                 <span className="font-bold">Capital:</span> {capital}
               </p>
             </div>
             <div className="w-11/12 ml-2 md:w-2/5">
               <p>
-                {" "}
                 <span className="font-bold">Top Level Domain:</span> {tld}
               </p>
               <p>
-                {" "}
-                <span className="font-bold">Currencies:</span> {}
+                <span className="font-bold">Continents:</span> {continents}
               </p>
               <p>
-                {" "}
-                <span className="font-bold">Languages:</span> {}
+                <span className="font-bold">Currencies:</span>{" "}
+                {Currencies[0].name}
+              </p>
+              <p>
+                <span className="font-bold">Languages:</span>{" "}
+                {Languages.join(" , ")}
               </p>
             </div>
           </div>
-          <div className="w-11/12 ml-2 md:w-2/5">
-            <p>
-              {" "}
-              <span className="font-bold">Border Countries:</span> {}
-            </p>
+          <div className="w-11/12 ml-2">
+            <span className="font-bold">Border Countries: </span>
+            {borders ? borders.join(" , ") : "No Borders"}
           </div>
         </div>
       </div>

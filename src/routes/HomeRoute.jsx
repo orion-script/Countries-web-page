@@ -60,7 +60,7 @@ function HomeRoutes() {
 
   return (
     <div className="bg-gray-100 dark:bg-gray-800 dark:text-white w-full">
-      <div className="md:flex md:flex-row justify-between md:py-10 pt-5 pb-16 w-full h-auto md:px-8 items-center">
+      <div className="md:flex md:flex-row justify-between md:py-10 pt-5 pb-16 w-full md:w-11/12 md:m-auto h-auto md:px-8 items-center">
         <SearchBox
           onChangeHandler={onSearchChange}
           placeholder="search countries..."
