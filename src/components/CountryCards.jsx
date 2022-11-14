@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CountryCards({ country }) {
   return (
     <Link
-      className="bg-white w-4/5 md:w-auto m-auto md:m-0 h-auto rounded-xl shadow-xl dark:bg-gray-700 dark:text-white pb-5"
+      className="bg-white w-11/12 md:w-auto m-auto md:m-0 h-auto rounded-xl shadow-xl dark:bg-gray-700 dark:text-white pb-5"
       to="/details"
       state={country}
     >

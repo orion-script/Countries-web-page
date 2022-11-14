@@ -22,7 +22,7 @@ function CountryDetails() {
   const Currencies = Object.values(state.currencies);
 
   return (
-    <div className="bg-slate-100 dark:bg-gray-800 dark:text-white w-full h-auto pt-10">
+    <div className="bg-slate-100 dark:bg-gray-800 dark:text-white w-full pt-10">
       <Link
         className="bg-white flex flex-row justify-center items-center w-28 p-2 ml-5 mb-10 md:ml-24 shadow-lg hover:shadow-2xl rounded dark:bg-gray-700 dark:text-white"
         to="/"

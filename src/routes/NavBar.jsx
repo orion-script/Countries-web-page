@@ -5,16 +5,34 @@ import { FaMoon } from "react-icons/fa";
 import { useState } from "react";
 
 function NavBar() {
-  const [mode, setMode] = useState(true);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
 
-  const toggleMode = () => {
-    if (mode) {
-      document.body.classList.add("dark");
-      setMode(false);
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function onWindowMatch() {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && darkMode.matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-    if (!mode) {
+  }
+
+  onWindowMatch();
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    } else {
       document.body.classList.remove("dark");
-      setMode(true);
+      localStorage.setItem("theme", "light");
+      setTheme("light");
     }
   };
 
@@ -26,7 +44,7 @@ function NavBar() {
         </div>
         <div
           className="flex flex-row items-center cursor-pointer"
-          onClick={toggleMode}
+          onClick={toggleTheme}
         >
           <FaMoon className="cursor-pointer" />
           <p className="px-2 font-bold text-xs md:text-base">Dark Mode</p>
