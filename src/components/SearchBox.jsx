@@ -3,7 +3,7 @@ import React from "react";
 function SearchBox({ onChangeHandler, placeholder, searchField }) {
   return (
     <div className="relative w-11/12 m-auto md:m-0 md:w-2/5">
-      <span className="absolute inset-y-0 left-0 flex items-center py-4 w-11/12 m-auto md:m-0 md:w-2/5">
+      <span className="absolute inset-y-0 left-0 flex items-center py-4 w-1/12 m-auto md:m-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="ml-3 w-6 h-6"
