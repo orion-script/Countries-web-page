@@ -8,11 +8,13 @@ function CountryCards({ country }) {
       to="/details"
       state={country}
     >
-      <img
-        src={country.flags.svg}
-        alt={country.flags}
-        className="md:h-56 rounded-t-xl"
-      />
+      <div className="w-full h-[200px] rounded-t-xl">
+        <img
+          src={country.flags.svg}
+          alt={country.flags}
+          className="w-full h-full object-cover rounded-t-xl"
+        />
+      </div>
       <div className="pl-5">
         <h1 className="font-bold text-lg md:text-xl py-3">
           {country.name.common}

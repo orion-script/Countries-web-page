@@ -4,6 +4,7 @@ import Spinner from "../components/Spinner";
 import SearchBox from "../components/SearchBox";
 import FilteredByRegoin from "../components/FilteredByRegion";
 import Country from "../components/Country";
+import NavBar from "../components/NavBar";
 
 function HomeRoutes() {
   //useSates
@@ -59,7 +60,8 @@ function HomeRoutes() {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 dark:text-white w-full md:px-5">
+    <div className="bg-gray-100 dark:bg-gray-800 dark:text-white w-full">
+      <NavBar />
       <div className="md:flex md:flex-row justify-between md:py-10 pt-5 pb-16 w-full md:w-11/12 md:m-auto h-auto md:px-8 items-center">
         <SearchBox
           onChangeHandler={onSearchChange}
@@ -68,7 +70,7 @@ function HomeRoutes() {
         <FilteredByRegoin onSelectHandler={onSelectChange} />
       </div>
 
-      <div>
+      <div className="md:px-5">
         {errorMessage && (
           <div className="font-bold text-center text-xl italic mt-20">
             {errorMessage}
